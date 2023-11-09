@@ -201,7 +201,7 @@ fi
 
 PKG_CHECK_MODULES(
   MSGPACK,
-  msgpack >= 1.1.0,
+  msgpack-c >= 1.1.0,
   [
     CPPFLAGS="$MSGPACK_CFLAGS $CPPFLAGS"
     LIBS="$MSGPACK_LIBS $LIBS"
@@ -316,8 +316,8 @@ if test "x$found_imsg_init" = xyes; then
 fi
 AM_CONDITIONAL(NO_IMSG, [test "x$found_imsg_init" = xno])
 
-# Look for forkpty in libutil. compat/forkpty-*.c is linked if not found.
-AC_SEARCH_LIBS(forkpty, util, found_forkpty=yes, found_forkpty=no)
+# Look for forkpty in libmisc. compat/forkpty-*.c is linked if not found.
+AC_SEARCH_LIBS(forkpty, misc, found_forkpty=yes, found_forkpty=no)
 if test "x$found_forkpty" = xyes; then
 	AC_DEFINE(HAVE_FORKPTY)
 fi

@@ -44,7 +44,7 @@ endif
 CPPFLAGS += -iquote.
 endif
 
-CFLAGS += -Wno-unused-parameter -Wno-unused-variable -Wno-null-pointer-arithmetic
+CFLAGS += -Wno-unused-parameter -Wno-unused-variable
 CFLAGS += -Wno-deprecated-declarations -Wno-format-nonliteral
 
 # Set flags for Solaris.
